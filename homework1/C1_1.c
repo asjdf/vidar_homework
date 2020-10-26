@@ -21,10 +21,6 @@ char up2down(char c){
 
 int main(){
     char text[TEXT_LEN];
-    for (size_t i = 0; i < 512; i++)
-    {
-        text[i] = ' ';
-    }
     int strLen = 0;
     int up = 0;
     int down = 0;

@@ -1,20 +1,16 @@
 #define TEXT_LEN 512
 #include <stdio.h>
 char down2up(char c){
-    if (c>='a'&&c<='z')
-    {
+    if (c>='a'&&c<='z'){
         return c - 'a' +'A';
-    }else
-    {
+    }else{
         return c;
     } 
 }
 char up2down(char c){
-    if (c>='A'&&c<='Z')
-    {
+    if (c>='A'&&c<='Z'){
         return c - 'A' + 'a';
-    }else
-    {
+    }else{
         return c;
     } 
 }
@@ -25,31 +21,24 @@ int main(){
     int up = 0;
     int down = 0;
     char c;
-    do
-    {
+    do{
         c=getchar();
-        if (c>='a'&&c<='z')
-        {
+        if (c>='a'&&c<='z'){
             
             down++;
-        }else if (c>='A'&&c<='Z')
-        {
+        }else if (c>='A'&&c<='Z'){
             up++;
         }
         text[strLen] = c;
         strLen++;
     } while (c != '\n');
 
-    if (down > up)
-    {
-        for (size_t i = 0; i < strLen-1; i++)
-            {
-                printf("%c", up2down(text[i]));
-            }
-    }else
-    {
-        for (size_t i = 0; i < strLen-1; i++)
-        {
+    if (down > up){
+        for (size_t i = 0; i < strLen-1; i++){
+            printf("%c", up2down(text[i]));
+        }
+    }else{
+        for (size_t i = 0; i < strLen-1; i++){
             printf("%c", down2up(text[i]));
         }
     }

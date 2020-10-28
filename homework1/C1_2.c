@@ -1,16 +1,14 @@
 #include <stdio.h>
 float hourDeg(int hour, int minute){
-    return hour*30 + minute/2;
+    return hour*30 + minute/2.0;
 }
 float minuteDeg(int minute){
     return minute*6.0;
 }
 float deltaDeg(float deg1, float deg2){
-    if (deg1 > deg2)
-    {
+    if (deg1 > deg2){
         return 360 - deg1 + deg2;
-    }else
-    {
+    }else{
         return deg2 - deg1;
     }
 }
